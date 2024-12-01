@@ -17,15 +17,14 @@ body, html {
   width: 100%;
   height: 100%;
   display: flex;
+  background: url("../background.png") right no-repeat;
+  background-size: cover;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
 }
 
 .main-box {
-  position: relative;
-  background: url("../background.png") right no-repeat;
-  background-size: cover;
   height: 100vh;
   width: 100%;
 }
@@ -210,7 +209,7 @@ body, html {
   line-height: 60px;
   cursor: pointer;
   opacity: 1;
-  transition: all 0.8s linear;
+  transition: 0.1s linear;
   z-index: 100;
 }
 
@@ -222,7 +221,7 @@ body, html {
   cursor: pointer;
   opacity: 0;
   color: #fff;
-  transition: all 0.8s linear;
+  transition: 0.1s linear;
 }
 
 .btn-one i:hover {
