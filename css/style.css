@@ -40,6 +40,19 @@ body, html {
   z-index: 99;
 }
 
+.sub-menu {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+#dropdown-check:checked ~ .sub-menu {
+  max-height: 200px;
+  transition: 0.8s ease;
+  opacity: 1;
+}
+
 .sidebar-menu .logo {
   position: absolute;
   width: 100%;
@@ -77,33 +90,36 @@ body, html {
   list-style: none;
 }
 
-.menu .sidebar-menu .sub-menu {
+/* .menu .sidebar-menu .sub-menu {
   display: grid;
   grid-template-rows: 0fr;
-  transition: 3s ease-in-out;
-
-    div{
-      overflow: hidden;
-    }
-}
-
+  max-height: 0;
+  transition: max-height 3s ease-in-out;
+  overflow: hidden;
+} */
+/* 
 .menu .sidebar-menu .sub-menu.show {
   grid-template-rows: 1fr;
+} */
+
+.dropdown-label {
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  transition: transform 0.4s ease;
 }
 
-.dropdown-icon {
+.dropdown-label .dropdown-icon {
   font-size: 24px;
   color: #fff;
-  margin-left: 10px;
+  margin-top: 4px;
+  float: right;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
   flex-grow: 1;
 }
-
-/* Rotate dropdown icon when active
-.menu .sub-menu li.active .dropdown-icon {
-  transform: rotate(180deg);
-} */
 
 
 .sidebar-menu .menu i {
@@ -151,7 +167,7 @@ body, html {
 }
 
 .sidebar-menu .social-media i {
-  padding: 0 5px;
+  padding: 0 10px;
   color: #fff;
   opacity: 0.6;
   font-size: 18px;
@@ -160,8 +176,23 @@ body, html {
 
 .sidebar-menu .social-media i:hover {
   opacity: 1;
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
   transform: scale(1.01);
+}
+
+.sub-heading a:hover {
+  color: gold;
+  transition: color 0.4s ease;
+}
+
+.dropdown-icon:hover,
+.dropdown-label:hover {
+  color: gold;
+  transition: color 0.4s ease;
+}
+
+.dropdown-label:hover .dropdown-icon {
+  color: #fff;
 }
 
 #check {
@@ -177,7 +208,7 @@ body, html {
   line-height: 60px;
   cursor: pointer;
   opacity: 1;
-  transition: all 0.3s linear;
+  transition: all 0.8s linear;
   z-index: 100;
 }
 
@@ -189,7 +220,7 @@ body, html {
   cursor: pointer;
   opacity: 0;
   color: #fff;
-  transition: all 0.3s linear;
+  transition: all 0.8s linear;
 }
 
 .btn-one i:hover {
@@ -202,6 +233,21 @@ body, html {
 
 #check:checked ~ .sidebar-menu {
   left: 0;
+}
+
+#dropdown-check:checked ~ .sub-menu {
+  max-height: 200px;
+  opacity: 1;
+}
+
+#dropdown-check:checked + .dropdown-label .dropdown-icon {
+  transform: rotate(90deg);
+  transition: transform 0.6s ease;
+}
+
+#dropdown-check:not(:checked) + .dropdown-label .dropdown-icon {
+  transform: rotate(-90deg);
+  transition: transform 0.6s ease;
 }
 
 #check:checked ~ .btn-one i {
@@ -223,7 +269,6 @@ body, html {
 }
 
 .input-area, .output-area {
-  /* top: 40px; */
   position: relative;
   width: 30vw;
   max-width: 650px;
@@ -237,7 +282,6 @@ body, html {
   height: 90vh;
   width: 100%;
   max-width: 650px;
-  /* min-width: 300px; */
   padding: 20px 10px 10px 10px;
   outline: none;
   font-size: 1em;
@@ -246,7 +290,7 @@ body, html {
   border: 1px solid #fff;
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
-  transition: 0.1s ease;
+  transition: 0.4s ease;
 }
 
 .input-area .labelline, .output-area .labelline {
@@ -255,7 +299,7 @@ body, html {
   left: 10%;
   font-size: 16px;
   color: #fff;
-  transition: 0.2s ease;
+  transition: 0.4s ease;
 }
 
 .input-area textarea:focus, .input-area textarea:valid,
@@ -296,7 +340,7 @@ body, html {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.4s ease;
 }
 
 #generate-btn:hover {

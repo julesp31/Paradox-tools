@@ -39,39 +39,109 @@
         </label>
       </div>
 
-      <!-- Menu -->
-      <div class="menu">
-        <ul>
-          <li>
+<!-- Menu -->
+<div>
+  <ul class="menu">
+    <li>
+      <div class="menu-item">
+        <input type="checkbox" id="dropdown-check" hidden />
+        <label for="dropdown-check" class="dropdown-label">
+          <div class="menu-header">
             <i class="fas fa-tools menu-heading"></i>
-            <a href="#">Formatters</a>
-            <i class="fa-solid fa-chevron-down dropdown-icon"></i>
-            <ul class="sub-menu">
-              <li><a href="#">JSON Formatter</a></li>
-            </ul>
-          </li>
-          <li>
-            <i class="fas fa-check-circle menu-heading"></i>
-            <a href="#">Validators</a>
-          </li>
-          <li>
-            <i class="fas fa-exchange-alt menu-heading"></i>
-            <a href="#">Converters</a>
-          </li>
-          <li>
-            <i class="fas fa-lock menu-heading"></i>
-            <a href="#">Encoders</a>
-          </li>
-          <li>
-            <i class="fas fa-paint-brush menu-heading"></i>
-            <a href="#">Beautifiers</a>
-          </li>
-          <li>
-            <i class="fas fa-quote-left menu-heading"></i>
-            <a href="#">Escapers</a>
-          </li>
+            <span>Formatters</span>
+            <i class="fa-solid fa-chevron-right dropdown-icon"></i>
+          </div>
+        </label>
+      
+        <!-- Sub Menu -->
+        <ul class="sub-menu">
+          <li class="sub-heading"><a href="#json-formatter">JSON Formatter</a></li>
         </ul>
       </div>
+    </li>
+    
+    <li>
+      <div class="menu-item">
+        <input type="checkbox" id="dropdown-check2" hidden />
+        <label for="dropdown-check2" class="dropdown-label">
+          <div class="menu-header">
+            <i class="fas fa-check-circle menu-heading"></i>
+            <span>Validators</span>
+            <!-- <i class="fa-solid fa-chevron-right dropdown-icon"></i> -->
+          </div>
+        </label>
+        <ul class="sub-menu">
+          <li><a href="#">Validator 1</a></li>
+        </ul>
+      </div>
+    </li>
+
+    <li>
+      <div class="menu-item">
+        <input type="checkbox" id="dropdown-check3" hidden />
+        <label for="dropdown-check3" class="dropdown-label">
+          <div class="menu-header">
+            <i class="fas fa-exchange-alt menu-heading"></i>
+            <span>Converters</span>
+            <!-- <i class="fa-solid fa-chevron-right dropdown-icon"></i> -->
+          </div>
+        </label>
+        <ul class="sub-menu">
+          <li><a href="#">Converter 1</a></li>
+        </ul>
+      </div>
+    </li>
+
+    <li>
+      <div class="menu-item">
+        <input type="checkbox" id="dropdown-check4" hidden />
+        <label for="dropdown-check4" class="dropdown-label">
+          <div class="menu-header">
+            <i class="fas fa-lock menu-heading"></i>
+            <span>Encoders</span>
+            <!-- <i class="fa-solid fa-chevron-right dropdown-icon"></i> -->
+          </div>
+        </label>
+        <ul class="sub-menu">
+          <li><a href="#">Encoder 1</a></li>
+        </ul>
+      </div>
+    </li>
+
+    <li>
+      <div class="menu-item">
+        <input type="checkbox" id="dropdown-check5" hidden />
+        <label for="dropdown-check5" class="dropdown-label">
+          <div class="menu-header">
+            <i class="fas fa-paint-brush menu-heading"></i>
+            <span>Beautifiers</span>
+            <!-- <i class="fa-solid fa-chevron-right dropdown-icon"></i> -->
+          </div>
+        </label>
+        <ul class="sub-menu">
+          <li><a href="#">Beautifier 1</a></li>
+        </ul>
+      </div>
+    </li>
+
+    <li>
+      <div class="menu-item">
+        <input type="checkbox" id="dropdown-check6" hidden />
+        <label for="dropdown-check6" class="dropdown-label">
+          <div class="menu-header">
+            <i class="fas fa-quote-left menu-heading"></i>
+            <span>Escapers</span>
+            <!-- <i class="fa-solid fa-chevron-right dropdown-icon"></i> -->
+          </div>
+        </label>
+        <ul class="sub-menu">
+          <li><a href="#">Escaper 1</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
+      
 
       <!-- Social Media Links -->
       <div class="social-media">
@@ -89,14 +159,14 @@
     <!-- Text Container -->
     <div class="text-container">
       <div class="input-area">
-        <textarea placeholder="" required spellcheck="false"></textarea>
+        <textarea required spellcheck="false"></textarea>
         <div class="labelline">Copy-paste your text here</div>
       </div>
       <div class="generate-btn-box">
         <button id="generate-btn">Generate</button>
       </div>
       <div class="output-area">
-        <textarea placeholder="" readonly spellcheck="false"></textarea>
+        <textarea readonly spellcheck="false"></textarea>
         <div class="labelline">Generated output will appear here</div>
       </div>
     </div>
