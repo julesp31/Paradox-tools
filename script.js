@@ -6,9 +6,10 @@
   // Add click event listeners
   btnOne.addEventListener('click', () => {
     textContainer.style.marginLeft = '250px'; // Move the text container
+    textContainer.style.marginRight = '10px';
   });
   
   btnTwo.addEventListener('click', () => {
-    textContainer.style.marginLeft = '0'; // Reset the text container
+    textContainer.style.marginLeft = '10px'; // Reset the text container
   });
   

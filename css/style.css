@@ -10,7 +10,7 @@
   padding: 0;
 }
 .text-container {
-  transition: margin-left 0.3s ease;
+  transition: margin-left 0.4s ease;
 }
 body, html {
   font-family: "Poppins", sans-serif;
@@ -32,12 +32,12 @@ body, html {
 .main-box .sidebar-menu {
   position: fixed;
   height: 100vh;
-  width: 250px;
-  left: -250px;
+  width: 240px;
+  left: -240px;
   background: transparent;
   box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
   overflow: hidden;
-  transition: all 0.3s linear;
+  transition: all 0.4s linear;
   z-index: 99;
 }
 
@@ -90,18 +90,6 @@ body, html {
   position: relative;
   list-style: none;
 }
-
-/* .menu .sidebar-menu .sub-menu {
-  display: grid;
-  grid-template-rows: 0fr;
-  max-height: 0;
-  transition: max-height 3s ease-in-out;
-  overflow: hidden;
-} */
-/* 
-.menu .sidebar-menu .sub-menu.show {
-  grid-template-rows: 1fr;
-} */
 
 .dropdown-label {
   align-items: center;
@@ -209,7 +197,7 @@ body, html {
   line-height: 60px;
   cursor: pointer;
   opacity: 1;
-  transition: 0.1s linear;
+  transition: 0.3s linear;
   z-index: 100;
 }
 
@@ -217,11 +205,11 @@ body, html {
   font-size: 30px;
   line-height: 60px;
   position: absolute;
-  left: 215px;
+  left: 205px;
   cursor: pointer;
   opacity: 0;
   color: #fff;
-  transition: 0.1s linear;
+  transition: 0.3s linear;
 }
 
 .btn-one i:hover {
@@ -261,7 +249,7 @@ body, html {
 
 .text-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   height: auto;
   align-items: center;
   justify-content: center;
@@ -271,7 +259,7 @@ body, html {
 
 .input-area, .output-area {
   position: relative;
-  width: 30vw;
+  width: 35vw;
   max-width: 650px;
   line-height: 60px;
   text-align: center;
@@ -280,7 +268,7 @@ body, html {
 
 .input-area textarea, .output-area textarea{
   font-family: 'Courier New', Courier, monospace;
-  height: 90vh;
+  height: 92vh;
   width: 100%;
   max-width: 650px;
   padding: 20px 10px 10px 10px;
@@ -300,13 +288,14 @@ body, html {
   left: 10%;
   font-size: 16px;
   color: #fff;
-  transition: 0.4s ease;
+  transition: border 0.4s ease, color 0.4s ease;
 }
 
 .input-area textarea:focus, .input-area textarea:valid,
 .output-area textarea:focus, .output-area textarea:valid {
   color: #fff;
   border: 2px solid gold;
+  transition: 0.4s linear;
 }
 
 .input-area textarea:focus + .labelline,
@@ -319,6 +308,7 @@ body, html {
   line-height: 30px;
   padding: 0 12px;
   transform: translate(-15px, -15px) scale(0.88);
+  transition: 0.4s ease;
   z-index: 1;
 }
 
@@ -332,20 +322,29 @@ body, html {
 }
 
 #generate-btn {
-  padding: 10px;
-  width: 150px;
+  width: 10vw; 
+  max-width: 150px; 
+  height: 8vh;
+  max-height: 60px; 
+  font-size: 1.2em;
+  /* width: 150px;
   height: 60px;
-  font-size: 20px;
-  background-color: gold;
-  color: #141416;
-  border: none;
+  font-size: 20px; */
+  background-color: #141416;
+  color: gold;
+  border: 1.5px solid #fff;
   border-radius: 10px;
   cursor: pointer;
-  transition: 0.4s ease;
+  transition: all 0.6s ease;
 }
 
 #generate-btn:hover {
-  background-color: #3A3D43;
-  color: #fff;
-  transform: scale(1);
-}/*# sourceMappingURL=style.css.map */
+  background-color: gold;
+  font-size: 1.3em;
+  color:#141416;
+  border-color: gold;
+  /* transform: scale(1.05); */
+  transition: all 0.6s ease; 
+}
+
+/*# sourceMappingURL=style.css.map */
