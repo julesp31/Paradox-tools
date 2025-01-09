@@ -34,7 +34,7 @@ body, html {
   height: 100vh;
   width: 240px;
   left: -240px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.6);;
   box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
   overflow: hidden;
   transition: all 0.4s linear;
@@ -62,11 +62,11 @@ body, html {
 }
 
 .sidebar-menu .logo a {
-  color: #fff;
+  color: #EDEDED;
   font-size: 22px;
   font-weight: 500;
   position: absolute;
-  left: 30px;
+  left: 20px;
   line-height: 60px;
   text-decoration: none;
 }
@@ -79,7 +79,7 @@ body, html {
 
 .sidebar-menu .menu li {
   margin-top: 6px;
-  padding: 14px 30px 14px 30px;
+  padding: 14px 20px 14px 20px;
   position: relative;
   list-style: none;
 }
@@ -94,7 +94,7 @@ body, html {
 .dropdown-label {
   align-items: center;
   cursor: pointer;
-  color: #fff;
+  color: #EDEDED;
   font-size: 16px;
   text-decoration: none;
   transition: transform 0.4s ease;
@@ -102,7 +102,7 @@ body, html {
 
 .dropdown-label .dropdown-icon {
   font-size: 24px;
-  color: #fff;
+  color: #EDEDED;
   margin-top: 4px;
   float: right;
   cursor: pointer;
@@ -112,25 +112,25 @@ body, html {
 
 
 .sidebar-menu .menu i {
-  color: #fff;
+  color: #EDEDED;
   font-size: 16px;
   padding-right: 8px;
 }
 
 .sidebar-menu .menu a {
-  color: #fff;
+  color: #EDEDED;
   font-size: 16px;
   text-decoration: none;
 }
 
 .sidebar-menu .sub-menu a {
-  color: #fff;
+  color: #EDEDED;
   font-size: 14px;
   text-decoration: none;
 }
 
 .sidebar-menu .menu li:hover {
-  border-left: 1px solid #fff;
+  border-left: 1px solid #EDEDED;
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
 }
 
@@ -157,7 +157,7 @@ body, html {
 
 .sidebar-menu .social-media i {
   padding: 0 10px;
-  color: #fff;
+  color: #EDEDED;
   opacity: 0.6;
   font-size: 18px;
   text-decoration: none;
@@ -169,19 +169,24 @@ body, html {
   transform: scale(1.01);
 }
 
+.sub-heading {
+  height: 65px;
+  width: 205px;
+}
+
 .sub-heading a:hover {
-  color: gold;
+  color: #FFC107;
   transition: color 0.4s ease;
 }
 
 .dropdown-icon:hover,
 .dropdown-label:hover {
-  color: gold;
+  color: #FFC107;
   transition: color 0.4s ease;
 }
 
 .dropdown-label:hover .dropdown-icon {
-  color: #fff;
+  color: #EDEDED;
 }
 
 #check {
@@ -189,7 +194,7 @@ body, html {
 }
 
 .main-box .btn-one i {
-  color: #fff;
+  color: #EDEDED;
   font-size: 30px;
   font-weight: 700;
   position: absolute;
@@ -208,7 +213,7 @@ body, html {
   left: 205px;
   cursor: pointer;
   opacity: 0;
-  color: #fff;
+  color: #EDEDED;
   transition: 0.3s linear;
 }
 
@@ -247,6 +252,26 @@ body, html {
   opacity: 1;
 }
 
+.hero {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #EDEDED;
+  text-align: center;
+  padding: 15px 45px;
+  margin-bottom: 40px;
+  transition: margin-left 0.3s linear;
+}
+
+.hero h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  /* color: #FFC107; */
+  color: #FFC107;
+}
+
 .text-container {
   display: flex;
   flex-wrap: nowrap;
@@ -268,7 +293,7 @@ body, html {
 
 .input-area textarea, .output-area textarea{
   font-family: 'Courier New', Courier, monospace;
-  height: 92vh;
+  height: 70vh;
   width: 100%;
   max-width: 650px;
   padding: 20px 10px 10px 10px;
@@ -276,9 +301,9 @@ body, html {
   font-size: 1em;
   line-height: 1.8;
   border-radius: 10px;
-  border: 1px solid #fff;
+  border: 1px solid #EDEDED;
   background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  color: #EDEDED;
   transition: 0.4s ease;
 }
 
@@ -287,22 +312,22 @@ body, html {
   top: 0%; 
   left: 10%;
   font-size: 16px;
-  color: #fff;
-  transition: border 0.4s ease, color 0.4s ease;
+  color: #EDEDED;
+  transition: border 0.4s ease, color 0.4s ease, transform 0.4s ease;
 }
 
 .input-area textarea:focus, .input-area textarea:valid,
 .output-area textarea:focus, .output-area textarea:valid {
-  color: #fff;
-  border: 2px solid gold;
-  transition: 0.4s linear;
+  color: #EDEDED;
+  border: 2px solid #FFC107;
+  transition: border 0.4s linear, color 0.4s linear;
 }
 
 .input-area textarea:focus + .labelline,
 .input-area textarea:valid + .labelline,
 .output-area textarea:focus + .labelline,
 .output-area textarea:valid + .labelline {
-  color: gold;
+  color: #FFC107;
   background: rgba(0, 0, 0, 1);
   height: 30px;
   line-height: 30px;
@@ -310,6 +335,11 @@ body, html {
   transform: translate(-15px, -15px) scale(0.88);
   transition: 0.4s ease;
   z-index: 1;
+}
+
+.input-area textarea:not(:focus):not(:valid) + .labelline,
+.output-area textarea:not(:focus):not(:valid) + .labelline {
+  transition: all 0.4s ease;
 }
 
 .labelline {
@@ -323,28 +353,39 @@ body, html {
 
 #generate-btn {
   width: 10vw; 
-  max-width: 150px; 
-  height: 8vh;
-  max-height: 60px; 
-  font-size: 1.2em;
-  /* width: 150px;
-  height: 60px;
-  font-size: 20px; */
+  max-width: 150px;
+  min-height: 8vh; 
+  max-height: 200px; 
+  padding: 5px; 
   background-color: #141416;
-  color: gold;
-  border: 1.5px solid #fff;
+  color: #FFC107;
+  border: 1.5px solid #EDEDED;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.6s ease;
+  font-size: clamp(0.4rem, 1.3vw, 1.3rem); 
+  overflow: hidden;
+  text-align: center;
 }
 
 #generate-btn:hover {
-  background-color: gold;
-  font-size: 1.3em;
+  background-color: #FFC107;
+  font-size: clamp(0.4rem, 1.4vw, 1.4rem);
   color:#141416;
-  border-color: gold;
+  border-color: #FFC107;
   /* transform: scale(1.05); */
   transition: all 0.6s ease; 
 }
 
-/*# sourceMappingURL=style.css.map */
+#generate-btn span {
+  width: 100%;
+  word-break: break-word;
+}
+
+/* For large screens (e.g., desktops and widescreens)
+@media screen and (min-width: 1440px) {
+  .input-area textarea,
+  .output-area textarea {
+    height: 75vh;
+  }
+} */
