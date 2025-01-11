@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TSE Tools | Paradox</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
   <script src="https://kit.fontawesome.com/f89168b549.js"></script>
 </head>
 
@@ -154,7 +154,7 @@
     <header class="hero">
       <div class="hero-content">
         <h1>Open Interview Time (OIT) Formatter</h1>
-        <p>Returns the User’s OITs at the time of the Candidate’s Interview Request</p>
+        <p>Returns the User’s OITs at the time of the Candidate’s Interview Request in the UTC timezone</p>
       </div>
     </header>
 
@@ -162,7 +162,7 @@
     <div class="text-container">
             
       <div class="input-area">
-        <textarea required spellcheck="false"></textarea>
+        <textarea id="input-text" required spellcheck="false"></textarea>
         <div class="labelline">Copy-paste your text here</div>
       </div>
       <div class="generate-btn-box">
@@ -171,10 +171,10 @@
         </button>
       </div>      
       <div class="output-area">
-        <textarea readonly spellcheck="false"></textarea>
+        <textarea id="output-text" readonly spellcheck="false"></textarea>
         <div class="labelline">Generated output will appear here</div>
       </div>
     </div>
-<script src="script.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
